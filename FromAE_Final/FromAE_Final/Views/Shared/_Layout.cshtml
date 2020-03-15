@@ -1,0 +1,456 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
+    
+        <link rel="stylesheet" href="~/css/index.css" asp-append-version="true">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+    <div class="container-fluid border_top" style="background-color: #fafafa;">
+        <div class="row">
+            <div class="col-4 col-sm-9 col-md-9 col-lg-7 top_left d-flex">
+                <div class="pl-2 pr-2"><i class="mdi mdi-cellphone-basic"></i><a href="">+994 70 311 00 00</a></div>
+                <div class="pl-2 pr-2"><i class="mdi mdi-lifebuoy"></i><a href="">Yardım Mərkəzi</a></div>
+                <div class="pl-2 pr-2"><i class="mdi mdi-map-marker-outline"></i><a href="">Sifarişi izləmək</a></div>
+                <div class="pl-2 pr-2"><i class="mdi mdi-bell-ring-outline"></i><a href="">Blog</a></div>
+            </div>
+            <div class="col-8 col-sm-3 col-md-3 col-lg-5 pl-5 d-flex align-items-center top_right">
+                <img class="col-7 pl-5 d-none d-xs-none d-sm-none d-md-none d-lg-block"
+                     src="/Images/az_payment_methods.png" alt="">
+                <div class="pl-3">
+                    <select name="" id="" class="border-0 language">
+                        <option value="azərbaycan">azərbaycan</option>
+                        <option value="русский">русский</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-3 col-md-2 col-lg-11 col-xl-11 d-flex pt-2 pb-2 align-items-center">
+                    <div>
+                        <img style="width:120px ; height:49px" src="/Images/logo.png" alt="" >
+                    </div>
+                    <div class="search d-none d-lg-block pl-3 pt-2">
+                        <input class="form-control" type="search"
+                               placeholder="Search for products, categories">
+                    </div>
+                </div>
+                <div class="col-8 col-sm-9 col-md-10 col-lg-1 col-xl-1 d-flex align-items-center p-0 m-0">
+                    <div class="d-flex align-items-center icon ">
+                        <a class="pl-5 d-lg-none d-md-block hide-menu" href=""><i class="mdi mdi-menu"></i></a>
+                        <a class="show-search d-lg-none d-md-block" href=""><i class="mdi mdi-magnify"></i></a>
+                        <a data-toggle="modal" data-target=".log-sign" href=""><i class="mdi mdi-account-outline"></i></a>
+                        <a class="" style="cursor: default;" href=""><i class="mdi mdi-basket-fill"></i></a>
+                        <a class="" href=""><i class="mdi mdi-chat-outline"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid searching" style="background-color: #eee;">
+            <div class="row  p-2">
+                <input class="form-control" type="search" placeholder="Search for products, categories">
+            </div>
+        </div>
+    </div>
+    <header class="">
+        <nav id="menu">
+            <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+            <input type="checkbox" id="tm">
+            <ul class="main-menu clearfix">
+
+                @await Component.InvokeAsync("Menu")
+            </ul>
+        </nav>
+    </header>
+    @RenderBody()
+
+
+    <!-- ------------------------------FOOTER ------------------------------->
+
+    <footer class="pt-5 pb-5">
+
+        <div class="container-fluid">
+            <div class="foot row ">
+                <div class="col-12 col-md-6 col-lg-3 ">
+                    <h4>Istifadəçilərə</h4>
+                    <ul>
+                        <li><a class="margin-left" href="">Sifarişlərim</a></li>
+                        <li><a class="margin-left" href="">Hesabım</a></li>
+                        <li><a class="margin-left" href="">Xəbərlərim</a></li>
+                        <li><a class="margin-left" href="">Zəmanət</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4>Informasiya</h4>
+                    <ul>
+                        <li><a class="margin-left" href="">Haqqımızda</a></li>
+                        <li><a class="margin-left" href="">Bizimlə əlaqə</a></li>
+                        <li><a class="margin-left" href="">Çatdırılma</a></li>
+                        <li><a class="margin-left" href="">Ödənişlər</a></li>
+                        <li><a class="margin-left" href="">Göndərmə qaydaları</a></li>
+                        <li><a class="margin-left" href="">Məxfilik siyasəti</a></li>
+                        <li><a class="margin-left" href="">Xidmət şərtələri</a></li>
+                        <li><a class="margin-left" href="">Sifarış və geri qaytarma</a></li>
+                        <li><a class="margin-left" href="">Sual Cavab?</a></li>
+                        <li><a class="margin-left" href="">Axtarış</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4>Əlaqə məlumatı</h4>
+                    <ul>
+                        <li>
+                            <a class="margin-left" href="">
+                                <i class="mdi mdi-email"></i><span class="text-dark">Email:</span>
+                                murad_binyetov@mail.ru
+                            </a>
+                        </li>
+                        <li>
+                            <a class="margin-left" href="">
+                                <i class="mdi mdi-cellphone"></i><span class="text-dark">Mobil:</span>+99455 303
+                                21 59
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4>Yeniliklər</h4>
+
+                    <div>
+                        <label for="email">Yeniliklərə Abunə Ol:</label>
+                        <input class="col-12" id="email" placeholder="Email ünvanınızı daxil edin" type="text">
+                    </div>
+                    <button class="btn btn-success mt-3">
+                        Abunə Ol
+                    </button>
+                </div>
+            </div>
+
+            <div class="social pt-3 row d-flex justify-content-center">
+                <ul class="col-8 col-sm-4 col-md-4 d-flex justify-content-center ">
+                    <li><a href=""><img src="/Images/google.png" alt="social"></a></li>
+                    <li><a href=""><img src="/Images/facebook.png" alt="social"></a></li>
+                    <li><a href=""><img src="/Images/twitter.png" alt="social"></a></li>
+                    <li><a href=""><img src="/Images/vk.png" alt="social"></a></li>
+                    <li><a href=""><img src="/Images/watsup.png" alt="social"></a></li>
+                    <li><a href=""><img src="/Images/instagram (1).png" alt="social"></a></li>
+                </ul>
+            </div>
+
+            <p class="text-center">© 2020 Bütün hüquqlar qorunur.</p>
+        </div>
+
+
+
+
+    </footer>
+
+
+
+    <!-- ------------------------------FOOTER ------------------------------->
+    <!----------------------- MODAL ---------------------------------------->
+    <!-- Modal -->
+    <div class=" modal fade bs-modal-sm log-sign" id="myModal" tabindex="-1" role="dialog"
+         aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+                <div class="bs-example bs-example-tabs">
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li id="tab1" class=" active tab-style login-shadow ">
+                            <a href="#signin" data-toggle="tab">
+                                Daxil
+                                Ol
+                            </a>
+                        </li>
+                        <li id="tab2" class=" tab-style "><a href="#signup" data-toggle="tab">Qeydiyyat</a></li>
+
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <div id="myTabContent" class="tab-content">
+
+                        <div class="tab-pane fade active in" id="signin">
+                            <form class="form-horizontal">
+                                <fieldset>
+                                    <!-- Sign In Form -->
+                                    <!-- Text input-->
+
+                                    <div class="group">
+                                        <input required="" class="input" type="text"><span class="highlight"></span><span class="bar"></span>
+                                        <label class="label" for="date">Email address</label>
+                                    </div>
+
+
+                                    <!-- Password input-->
+                                    <div class="group">
+                                        <input required="" class="input" type="password"><span class="highlight"></span><span class="bar"></span>
+                                        <label class="label" for="date">Password</label>
+                                    </div>
+                                    <em>minimum 6 characters</em>
+
+                                    <div class="forgot-link">
+                                        <a href="#forgot" data-toggle="modal" data-target="#forgot-password">
+                                            I forgot
+                                            my password
+                                        </a>
+                                    </div>
+
+
+                                    <!-- Button -->
+                                    <div class="control-group">
+                                        <label class="control-label" for="signin"></label>
+                                        <div class="controls">
+                                            <button id="signin" name="signin" class="btn btn-primary btn-block">
+                                                Log
+                                                In
+                                            </button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+
+
+                        <div class="tab-pane fade" id="signup">
+                            <form class="form-horizontal">
+                                <fieldset>
+                                    <!-- Sign Up Form -->
+                                    <!-- Text input-->
+                                    <div class="group">
+                                        <input required="" class="input" type="text"><span class="highlight"></span><span class="bar"></span>
+                                        <label class="label" for="date">First Name</label>
+                                    </div>
+
+                                    <!-- Text input-->
+                                    <div class="group">
+                                        <input required="" class="input" type="text"><span class="highlight"></span><span class="bar"></span>
+                                        <label class="label" for="date">Last Name</label>
+                                    </div>
+
+                                    <!-- Password input-->
+                                    <div class="group">
+                                        <input required="" class="input" type="text"><span class="highlight"></span><span class="bar"></span>
+                                        <label class="label" for="date">Email</label>
+                                    </div>
+
+                                    <!-- Text input-->
+                                    <div class="group">
+                                        <input required="" class="input" type="password"><span class="highlight"></span><span class="bar"></span>
+                                        <label class="label" for="date">Password</label>
+                                    </div>
+                                    <em>1-8 Characters</em>
+
+
+
+
+
+                                    <!-- Button -->
+                                    <div class="control-group">
+                                        <label class="control-label" for="confirmsignup"></label>
+                                        <div class="controls">
+                                            <button id="confirmsignup" name="confirmsignup"
+                                                    class="btn btn-primary btn-block">
+                                                Sign Up
+                                            </button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--modal2-->
+
+    <div class="modal fade bs-modal-sm" id="forgot-password" tabindex="0" role="dialog"
+         aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Password will be sent to your email</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <fieldset>
+                            <div class="group">
+                                <input required="" class="input" type="text"><span class="highlight"></span><span class="bar"></span>
+                                <label class="label" for="date">Email address</label>
+                            </div>
+
+
+                            <div class="control-group">
+                                <label class="control-label" for="forpassword"></label>
+                                <div class="controls">
+                                    <button id="forpasswodr" name="forpassword"
+                                            class="btn btn-primary btn-block">
+                                        Send
+                                    </button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+
+        $(window, document, undefined).ready(function () {
+
+            $('.input').blur(function () {
+                var $this = $(this);
+                if ($this.val())
+                    $this.addClass('used');
+                else
+                    $this.removeClass('used');
+            });
+
+        });
+
+
+        $('#tab1').on('click', function () {
+            $('#tab1').addClass('login-shadow');
+            $('#tab2').removeClass('signup-shadow');
+        });
+
+        $('#tab2').on('click', function () {
+            $('#tab2').addClass('signup-shadow');
+            $('#tab1').removeClass('login-shadow');
+
+
+        });
+    </script>
+
+    <!----------------------- MODAL ---------------------------------------->
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            if ($(window).width() < 1001) $("#secret").on('click', function () {
+                $(".secret-search").css({ display: "block" })
+            });
+        });
+
+    </script>
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                responsiveClass: true,
+                responsive: {
+
+                    1000: {
+                        items: 4,
+                        nav: true,
+                        loop: false
+                    }
+                }
+            })
+        })
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('.first-button').on('click', function () {
+
+                $('.animated-icon1').toggleClass('open');
+            });
+            $('.second-button').on('click', function () {
+
+                $('.animated-icon2').toggleClass('open');
+            });
+            $('.third-button').on('click', function () {
+
+                $('.animated-icon3').toggleClass('open');
+            });
+        });
+
+    </script>
+
+    <script>
+
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                $('#chevron').show();
+            }
+            else {
+                $('#chevron').hide();
+            }
+
+        })
+    </script>
+
+
+</body>
+
+</html>
