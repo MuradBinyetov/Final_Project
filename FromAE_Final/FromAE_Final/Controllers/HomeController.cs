@@ -21,12 +21,7 @@ namespace FromAE_Final.Controllers
             context = _context;
         }
 
-        //public IActionResult Test(int id)
-        //{
-        //    var products = context.Products.Where(x => x.ProductCategories.Any(y => y.CategoryId == id));
-        //    return View(products);
-        //}
-
+      
         public IActionResult Index()
         {
             ViewModel viewModel = new ViewModel();
@@ -52,6 +47,36 @@ namespace FromAE_Final.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult FooterDelivery()
+        {
+            return View();
+        }
+        public IActionResult FooterPayment()
+        {
+            return View();
+        }
+
+        public IActionResult FooterSendRules()
+        {
+            return View();
+        }
+        public IActionResult FooterSecurity()
+        {
+            return View();
+        }
+        public IActionResult FooterService()
+        {
+            return View();
+        }
+        public IActionResult FooterOrder()
+        {
+            return View();
+        }
+        public IActionResult FooterAnswerQuestion()
+        {
+            return View();
         }
     }
 }

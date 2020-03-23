@@ -21,6 +21,13 @@ namespace FromAE_Final.Controllers
             ViewBag.Img = _context.Products.Where(x => x.Id == id).Select(y=>y.MainImg).ToList();
             ViewBag.Name = _context.Products.Where(x => x.Id == id).Select(y=>y.Name).ToList();
             ViewBag.Price = _context.Products.Where(x => x.Id == id).Select(y=>y.Price).ToList();
+           
+
+            return View();
+        }
+
+        public IActionResult GetCategoryProp(int id)
+        {
             return View();
         }
 
@@ -34,6 +41,26 @@ namespace FromAE_Final.Controllers
             viewModel.products = _context.Products.ToList();
             viewModel.productCategories = _context.ProductCategories.ToList();
             var prod= _context.Products.Where(x => x.ProductCategories.Any(y => y.CategoryId == id));
+            ViewBag.Istehsalci = (from m in _context.Markas
+                                  join mo in _context.Models on m.Id equals mo.MarkaId
+                                  join p in _context.Products on mo.Id equals p.ModelId
+                                  join pc in _context.ProductCategories on p.Id equals pc.ProductId
+                                  join c in _context.Categories on pc.CategoryId equals c.Id
+                                  where c.Id == id
+                                  select m.Name).Distinct();
+
+            ViewBag.Filter = (from C in _context.Categories
+                              join PC in _context.ProductCategories
+                              on C.Id equals PC.CategoryId
+                              join P in _context.Products
+                              on PC.ProductId equals P.Id
+                              join PP in _context.ProductProperties
+                              on P.Id equals PP.ProductId
+                              join PR in _context.Properties
+                              on PP.PropertyId equals PR.Id
+                              where C.Id == id
+                              select PR.Name).Distinct();
+           
             return View(prod);
         }
     }

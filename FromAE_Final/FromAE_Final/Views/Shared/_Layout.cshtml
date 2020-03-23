@@ -2,20 +2,20 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Sərfəli qiymətlə məhsullar al!</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="shortcut icon" href="~/Images/faviconFlag.jpg" type="image/x-icon" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
-    
-        <link rel="stylesheet" href="~/css/index.css" asp-append-version="true">
-    
-    
+
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true">
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -55,7 +55,10 @@
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2 col-lg-11 col-xl-11 d-flex pt-2 pb-2 align-items-center">
                     <div>
-                        <img style="width:120px ; height:49px" src="/Images/logo.png" alt="" >
+                        <a href="@Url.Action("Index","Home")">
+                            <img style="width:120px ; height:49px" src="/Images/logo.png" alt="" title="From.Ae">
+                        </a>
+                        
                     </div>
                     <div class="search d-none d-lg-block pl-3 pt-2">
                         <input class="form-control" type="search"
@@ -112,13 +115,13 @@
                     <ul>
                         <li><a class="margin-left" href="">Haqqımızda</a></li>
                         <li><a class="margin-left" href="">Bizimlə əlaqə</a></li>
-                        <li><a class="margin-left" href="">Çatdırılma</a></li>
-                        <li><a class="margin-left" href="">Ödənişlər</a></li>
-                        <li><a class="margin-left" href="">Göndərmə qaydaları</a></li>
-                        <li><a class="margin-left" href="">Məxfilik siyasəti</a></li>
-                        <li><a class="margin-left" href="">Xidmət şərtələri</a></li>
-                        <li><a class="margin-left" href="">Sifarış və geri qaytarma</a></li>
-                        <li><a class="margin-left" href="">Sual Cavab?</a></li>
+                        <li><a class="margin-left" href="@Url.Action("FooterDelivery","Home")">Çatdırılma</a></li>
+                        <li><a class="margin-left" href="@Url.Action("FooterPayment","Home")">Ödənişlər</a></li>
+                        <li><a class="margin-left" href="@Url.Action("FooterSendRules","Home")">Göndərmə qaydaları</a></li>
+                        <li><a class="margin-left" href="@Url.Action("FooterSecurity","Home")">Məxfilik siyasəti</a></li>
+                        <li><a class="margin-left" href="@Url.Action("FooterService","Home")">Xidmət şərtələri</a></li>
+                        <li><a class="margin-left" href="@Url.Action("FooterOrder","Home")">Sifarış və geri qaytarma</a></li>
+                        <li><a class="margin-left" href="@Url.Action("FooterAnswerQuestion","Home")">Sual Cavab?</a></li>
                         <li><a class="margin-left" href="">Axtarış</a></li>
                     </ul>
                 </div>

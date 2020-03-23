@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 * {
   -webkit-box-sizing: border-box;
@@ -86,14 +86,14 @@ html {
 }
 
 .Product .percent {
-  width: 3em;
-  height: 2.7em;
-  background: #cd2228;
-  border-radius: 6%;
-  text-align: center;
-  padding-top: 0.5em;
-  color: white;
-  text-align: center;
+    background: #cd2228;
+    border-radius: 6%;
+    text-align: center;
+    padding-top: 0.5em;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height:50px;
 }
 
 .Product .text-muted {

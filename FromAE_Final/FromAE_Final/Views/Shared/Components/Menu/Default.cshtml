@@ -8,9 +8,9 @@
     <li>
         <a href="#">
             @item.Name
-            <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
+            <label title="Toggle Drop-down" class="drop-icon" for="@item.Id">▾</label>
         </a>
-        <input type="checkbox" id="sm1">
+        <input type="checkbox" id="@item.Id">
         <ul class="sub-menu">
 
             @foreach (var item1 in item.SubMenus)
